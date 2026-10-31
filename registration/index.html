@@ -1,29 +1,76 @@
 <!doctype html>
-<html lang="th"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Registration | MÚSICA ONCE UPON A SONG 2026</title>
-<meta name="application-name" content="MÚSICA ONCE UPON A SONG 2026">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#04132A">
-<style>
-:root{color-scheme:dark;--app-bg:#04132A}
-html,body{margin:0;padding:0;width:100%;height:100%;min-width:100%;min-height:100%;background:var(--app-bg);overflow:hidden}
-body{position:fixed;inset:0;width:100vw;height:100vh;height:100svh;height:100dvh;min-height:100vh;min-height:100svh;min-height:100dvh;box-sizing:border-box}
-#app-shell{position:fixed;inset:0;width:100vw;height:100vh;height:100svh;height:100dvh;min-width:100vw;min-height:100vh;min-height:100svh;min-height:100dvh;margin:0;padding:0;border:0;overflow:hidden;background:var(--app-bg)}
-#contest-app{display:block;position:absolute;inset:0;width:100%;height:100%;min-width:100%;min-height:100%;margin:0;padding:0;border:0;overflow:hidden;background:var(--app-bg)}
-#loading{position:absolute;z-index:10;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:radial-gradient(ellipse at 50% 0%,rgba(213,181,109,.14),transparent 45%),#04132A;color:#D5B56D;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans Thai",sans-serif;transition:opacity .18s ease,visibility .18s ease}
-#loading .mark{width:66px;height:66px;border:1px solid rgba(213,181,109,.7);border-radius:50%;display:grid;place-items:center;font:24px Georgia,serif}
-#loading .spinner{width:28px;height:28px;border:3px solid rgba(213,181,109,.2);border-top-color:#D5B56D;border-radius:50%;animation:spin .75s linear infinite}
-#loading .label{font-size:14px;color:#B7C6D9}
-#loading.hidden{opacity:0;visibility:hidden;pointer-events:none}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){#loading{transition:none}.spinner{animation:none}}
-</style></head><body><div id="app-shell">
-<div id="loading" aria-hidden="true"><div class="mark">MÚ</div><div class="spinner"></div><div class="label">กำลังเปิดระบบสมัครแข่งขัน...</div></div>
-<iframe id="contest-app" src="https://script.google.com/macros/s/AKfycbxFBIjLzRNeD6YQLmksT88SlOTJ_kMOtYrkG4tqVq3K1unxDnQpbHiKsQSs9-4MsX86eQ/exec" title="Registration" allow="fullscreen; clipboard-read; clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-</div><script>
-const frame=document.getElementById('contest-app');
-const loading=document.getElementById('loading');
-frame.addEventListener('load',()=>{setTimeout(()=>loading.classList.add('hidden'),180);});
-setTimeout(()=>loading.classList.add('hidden'),15000);
-</script></body></html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MÚSICA ONCE UPON A SONG</title>
+  <meta name="application-name" content="MÚSICA ONCE UPON A SONG">
+  <meta name="apple-mobile-web-app-title" content="MÚSICA ONCE UPON A SONG">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#04132A">
+  <style>
+    :root { color-scheme: dark; --app-bg: #04132A; }
+    html, body {
+      margin: 0; padding: 0; width: 100%; height: 100%;
+      min-width: 100%; min-height: 100%;
+      background: var(--app-bg); overflow: hidden;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans Thai", sans-serif;
+      position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100svh;
+      height: 100dvh; min-height: 100vh; min-height: 100svh; min-height: 100dvh;
+      padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box;
+    }
+    #app-shell {
+      position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100svh;
+      height: 100dvh; min-width: 100vw; min-height: 100vh; min-height: 100svh;
+      min-height: 100dvh; padding-bottom: env(safe-area-inset-bottom, 0px);
+      box-sizing: border-box; margin: 0; padding: 0; border: 0;
+      overflow: hidden; background: var(--app-bg);
+    }
+    #contest-app {
+      display: block; position: absolute; inset: 0; width: 100%; height: 100%;
+      min-width: 100%; min-height: 100%; margin: 0; padding: 0; border: 0;
+      overflow: hidden; background: var(--app-bg);
+    }
+    #loading {
+      position: absolute; z-index: 10; inset: 0; display: flex;
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 18px; background: var(--app-bg);
+      transition: opacity .18s ease, visibility .18s ease;
+    }
+    #loading .spinner {
+      width: 34px; height: 34px; border: 3px solid rgba(213,181,109,.25);
+      border-top-color: #D5B56D; border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    #loading .label { font-size: 15px; color: #D5B56D; }
+    #loading.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { #loading { transition: none; } }
+  </style>
+</head>
+<body>
+  <div id="app-shell">
+    <div id="loading" aria-hidden="true">
+      <div class="spinner"></div>
+      <div class="label">กำลังเปิดระบบสมัครแข่งขัน...</div>
+    </div>
+    <iframe id="contest-app"
+      src="https://script.google.com/macros/s/AKfycbxFBIjLzRNeD6YQLmksT88SlOTJ_kMOtYrkG4tqVq3K1unxDnQpbHiKsQSs9-4MsX86eQ/exec"
+      title="MÚSICA ONCE UPON A SONG Registration"
+      allow="fullscreen; clipboard-read; clipboard-write"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <script>
+    const frame = document.getElementById('contest-app');
+    const loading = document.getElementById('loading');
+    frame.addEventListener('load', () => {
+      setTimeout(() => loading.classList.add('hidden'), 180);
+    });
+    // Safety timeout: never leave the loading overlay covering the page forever.
+    setTimeout(() => loading.classList.add('hidden'), 10000);
+  </script>
+</body>
+</html>
